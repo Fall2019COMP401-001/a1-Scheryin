@@ -33,7 +33,7 @@ public class A1Novice {
 			sumsArr[i] = sum;
 		}
 	for(int i = 0; i<totalCustomers; i++) {
-		System.out.println(customerNames[i].charAt(0) + ". " + customerLastNames[i] + ": " + sumsArr[i]);
+		System.out.println(customerNames[i].charAt(0) + ". " + customerLastNames[i] + ": " + String.format("%.2f", sumsArr[i]));
 	}
 	}
 }
