@@ -48,8 +48,8 @@ public class A1Adept {
 		}
 		double maxCount = customerTotal[0];
 		double maxNameCount = 0;
-		for (int p=1; p < customerTotal.length; p++) {
-			if (customerTotal[p] < minCount) {
+		for (int p=0; p < customerTotal.length; p++) {
+			if (customerTotal[p] > maxCount) {
 				maxCount = customerTotal[p];
 				maxNameCount = p;
 			}
@@ -57,8 +57,8 @@ public class A1Adept {
 	//	double max = findValueMax(customerTotal);
 		//double min = findValueMin(customerTotal);
 		double avg = calculateAvg(customerTotal);
-		System.out.println("Biggest: " + first[(int) maxNameCount] + " " + last[(int) maxNameCount] + " " + String.format("%.2f", maxCount));
-		System.out.println("Smallest: " + first[(int) minNameCount] + " " + last[(int) minNameCount] + " " + String.format("%.2f", minCount));
+		System.out.println("Biggest: " + first[(int) maxNameCount] + " " + last[(int) maxNameCount] + " (" + String.format("%.2f", maxCount) + ")");
+		System.out.println("Smallest: " + first[(int) minNameCount] + " " + last[(int) minNameCount] + " (" + String.format("%.2f", minCount) + ")");
 		System.out.println("Average: " + String.format("%.2f", avg));
 	}
 	
