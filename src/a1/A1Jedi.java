@@ -42,7 +42,7 @@ public class A1Jedi {
 				}
 				for(int i = 0; i<itemsInStore.length; i++) {
 					if(quantityBought[i] > 0) {
-				System.out.println(howManyCus[i] + " customers " + quantityBought[i] + " " + itemsInStore[i]);
+				System.out.println(howManyCus[i] + " customers bought" + quantityBought[i] + " " + itemsInStore[i]);
 					} else {
 						System.out.println("No customers bought " + itemsInStore[i]);
 					}
