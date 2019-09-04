@@ -21,25 +21,34 @@ public class A1Jedi {
 				String[] last = new String[numOfCust];
 				int[] howManyCus = new int[itemsInStore.length];
 				int[] quantityBought = new int[itemsInStore.length];
+
 				for(int i = 0; i<numOfCust; i++) {
 					first[i] = scan.next();
 					last[i] = scan.next();
 					int itemsBought = scan.nextInt();
+					boolean[] check = new boolean[itemsInStore.length];
+
 					for (int k = 0; k<itemsBought; k++) {
 						int quantity = scan.nextInt();
-						String nameOfItem = scan.next();
-						if(itemsInStore[k].equals(nameOfItem)) {
-						}
+						String[] nameOfItem = new String[itemsBought];
+						nameOfItem[k] = scan.next();
 						for (int j = 0; j<itemsInStore.length; j++) {
-						if(itemsInStore[j].equals(nameOfItem)) {
-						quantityBought[j] += quantity;
-						howManyCus[j]++;
-
-						}
-						}
-
+							if(nameOfItem[k].equals(itemsInStore[j])) {
+								quantityBought[j] += quantity;
+								if(!check[j]) {
+									howManyCus[j]++;
+									check[j] = true;
 					}
+						}
+						
+						}
+						
+					}
+						
 				}
+						
+						
+					
 				for(int i = 0; i<itemsInStore.length; i++) {
 					if(quantityBought[i] > 0) {
 				System.out.println(howManyCus[i] + " customers bought " + quantityBought[i] + " " + itemsInStore[i]);
